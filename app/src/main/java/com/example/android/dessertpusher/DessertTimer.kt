@@ -49,9 +49,8 @@ class DessertTimer(lifecycle: Lifecycle) : LifecycleObserver {
     private lateinit var runnable: Runnable
 
     init {
-        //observation relationship
+        //observation relationship... i.e. DessertTimer observer is observing the lifecycle
         lifecycle.addObserver(this)
-    }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun startTimer() {
